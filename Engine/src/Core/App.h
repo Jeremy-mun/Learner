@@ -1,14 +1,17 @@
 #pragma once
 
 #include "core.h"
-class API App
-{
-public:
-	App();
-	virtual ~App();
 
-	void Run();
-};
+namespace Engine {
+	class API App
+	{
+	public:
+		App();
+		virtual ~App();
 
-App* CreateApp();
+		void Run();
+	};
+
+	App* CreateApp();
+}
 

@@ -1,17 +1,19 @@
 #include "App.h"
 #include <iostream>
 
-App::App()
-{
+namespace Engine {
+	App::App()
+	{
 
-}
+	}
 
-App::~App()
-{
+	App::~App()
+	{
 
-}
+	}
 
-void App::Run()
-{
-	std::cin.get();
+	void App::Run()
+	{
+		std::cin.get();
+	}
 }

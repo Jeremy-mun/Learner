@@ -1,6 +1,6 @@
 #include "Engine.h"
 
-class TestingGround : public App
+class TestingGround : public Engine::App
 {
 public:
 	TestingGround()
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-App* CreateApp()
+Engine::App* Engine::CreateApp()
 {
 	return new TestingGround();
 }
