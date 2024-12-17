@@ -1,0 +1,6 @@
+[submodule "Learner/vendor/spdlog"]
+	path = Learner/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Engine/vendor/spdlog"]
+	path = Engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
