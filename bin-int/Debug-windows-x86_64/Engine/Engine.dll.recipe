@@ -2,10 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\Learner\bin\Debug-x64\Engine\Engine.dll</FullPath>
-    </ProjectOutput>
-    <ProjectOutput>
-      <FullPath>C:\dev\Learner\bin\Debug-x64\TestingGround\TestingGround.exe</FullPath>
+      <FullPath>C:\dev\Learner\bin\Debug-windows-x86_64\Engine\Engine.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
