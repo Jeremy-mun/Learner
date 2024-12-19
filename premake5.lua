@@ -26,13 +26,16 @@ project "Engine"
 	
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
+
+	buildoptions "/utf-8"
 
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 		defines
 		{
@@ -75,6 +78,8 @@ project "TestingGround"
 		"Engine/src"
 	}
 
+	buildoptions "/utf-8"
+
 	links
 	{
 		"Engine"
@@ -83,7 +88,7 @@ project "TestingGround"
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 		defines
 		{

@@ -5,8 +5,8 @@
 
 #include<memory>
 
-namespace Engine {
-
+namespace Engine
+{
 	class API Log
 	{
 	public:

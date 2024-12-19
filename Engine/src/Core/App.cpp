@@ -1,7 +1,11 @@
 #include "App.h"
-#include <iostream>
 
-namespace Engine {
+#include "Events/Event.h"
+#include "Core/Events/ApplicationEvent.h"
+#include "Core/Log.h"
+
+namespace Engine 
+{
 	App::App()
 	{
 
@@ -14,6 +18,9 @@ namespace Engine {
 
 	void App::Run()
 	{
-		std::cin.get();
+		WindowResizeEvent e(1280, 720);
+		TRACE(e.ToString());
+
+		while (true);
 	}
 }

@@ -2,7 +2,8 @@
 
 #include "core.h"
 
-namespace Engine {
+namespace Engine 
+{
 	class API App
 	{
 	public:
@@ -12,6 +13,7 @@ namespace Engine {
 		void Run();
 	};
 
+	// To be define in CLIENT
 	App* CreateApp();
 }
 
