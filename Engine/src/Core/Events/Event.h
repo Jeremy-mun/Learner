@@ -2,9 +2,6 @@
 
 #include "Core/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Engine
 {
 	//Events are currently blocking, will add an event buffer later.
