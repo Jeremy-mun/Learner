@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 .bin-int
+/bin-int/Debug-windows-x86_64
