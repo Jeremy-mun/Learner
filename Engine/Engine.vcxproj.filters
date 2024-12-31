@@ -21,7 +21,7 @@
     <ClInclude Include="src\Core\Core.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Events\ApplicationEvent.h">
+    <ClInclude Include="src\Core\Events\AppEvent.h">
       <Filter>Core\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Events\Event.h">
