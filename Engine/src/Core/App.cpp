@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "App.h"
 
-#include <GLFW/glfw3.h>
+#include <Glad/glad.h>
 
 namespace Engine 
 {
