@@ -25,6 +25,7 @@ public:
 	TestingGround()
 	{
 		PushLayer(new TestLayer());
+		PushOverlay(new Engine::ImGuiLayer());
 	}
 
 	~TestingGround()

@@ -11,11 +11,14 @@ workspace "Learner"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["vendor"] = "Engine/vendor"
 IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Engine/vendor/Glad/include"
+IncludeDir["imgui"] = "Engine/vendor/imgui"
 
 include "Engine/vendor/GLFW"
 include "Engine/vendor/Glad"
+include "Engine/vendor/imgui"
 
 project "Engine"
 	location "Engine"
@@ -38,15 +41,18 @@ project "Engine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.vendor}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
+		"%{IncludeDir.imgui}",
 		"%{prj.name}/vendor/glm/glm"
 	}
 
 	links
 	{
 		"GLFW",
-		"GLAD",
+		"Glad",
+		"imgui",
 		"opengl32.lib"
 	}
 
