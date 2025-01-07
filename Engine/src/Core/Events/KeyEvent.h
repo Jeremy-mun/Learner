@@ -50,4 +50,19 @@ namespace Engine
 		}
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
+
+	class API KeyTypedEvent : public KeyEvent
+	{
+	public:
+		KeyTypedEvent(unsigned keycode)
+			: KeyEvent(keycode) { }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyTypedEvent: " << m_KeyCode;
+			return ss.str();
+		}
+		EVENT_CLASS_TYPE(KeyTyped)
+	};
 }
