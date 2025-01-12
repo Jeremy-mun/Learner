@@ -1,11 +1,17 @@
 workspace "Learner"
-	architecture "x64"
+	architecture "x86_64"
+	startproject "TestingGround"
 
 	configurations
 	{
 		"Debug",
 		"Release",
 		"Dist"
+	}
+
+	flags
+	{
+		"MultiProcessorCompile"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -16,9 +22,11 @@ IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Engine/vendor/Glad/include"
 IncludeDir["imgui"] = "Engine/vendor/imgui"
 
-include "Engine/vendor/GLFW"
-include "Engine/vendor/Glad"
-include "Engine/vendor/imgui"
+group "Dependencies"
+	include "Engine/vendor/GLFW"
+	include "Engine/vendor/Glad"
+	include "Engine/vendor/imgui"
+group ""
 
 project "Engine"
 	location "Engine"
@@ -60,7 +68,7 @@ project "Engine"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 
 		defines
@@ -72,7 +80,8 @@ project "Engine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir.. "/TestingGround")
+			("IF NOT EXIST ../bin/" .. outputdir .. "TestingGround mkdir ../bin/" .. outputdir .. "/TestingGround"),
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir.. "/TestingGround/")
 		}
 
 	filter "configurations:Debug"
@@ -117,7 +126,7 @@ project "TestingGround"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 
 		defines
@@ -127,13 +136,13 @@ project "TestingGround"
 
 	filter "configurations:Debug"
 		defines "DEBUG"
+		runtime "Debug"
 		symbols "On"
-		buildoptions "/MDd"
 	filter "configurations:Release"
 		defines "RELEASE"
+		runtime "Release"
 		optimize "On"
-		buildoptions "/MD"
 	filter "configurations:Dist"
 		defines "DIST"
+		runtime "Release"
 		optimize "On"
-		buildoptions "/MD"

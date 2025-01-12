@@ -6,6 +6,8 @@
 #include "Events/AppEvent.h"
 #include "Layers/LayerStack.h"
 
+#include "Core/Input.h"
+
 namespace Engine 
 {
 	class API App
