@@ -26,7 +26,7 @@ namespace Engine
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(App::OnWindowClose));
 
-		CORE_TRACE("{0}",e.ToString());
+		//CORE_TRACE("{0}",e.ToString());
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -61,9 +61,6 @@ namespace Engine
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack) layer->OnUpdate();
-
-			auto [x, y] = Input::GetMousePosition();
-			CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}

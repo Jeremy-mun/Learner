@@ -68,6 +68,10 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\Core\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Core\KeyCodes.h" />
+    <ClInclude Include="src\Core\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\App.cpp">
@@ -92,5 +96,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		INFO("TestLayer::Update");
+		//INFO("TestLayer::Update");
 	}
 
 	void OnEvent(Engine::Event& e) override
 	{
-		TRACE("{0}", e.ToString());
+		//TRACE("{0}", e.ToString());
 	}
 };
 

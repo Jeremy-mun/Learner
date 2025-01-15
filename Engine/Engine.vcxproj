@@ -170,10 +170,12 @@ IF EXIST ..\bin\Dist-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\bin
     <ClInclude Include="src\Core\Events\MouseEvent.h" />
     <ClInclude Include="src\Core\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Core\Input.h" />
+    <ClInclude Include="src\Core\KeyCodes.h" />
     <ClInclude Include="src\Core\Layers\Layer.h" />
     <ClInclude Include="src\Core\Layers\LayerStack.h" />
     <ClInclude Include="src\Core\Log.h" />
     <ClInclude Include="src\Core\Main.h" />
+    <ClInclude Include="src\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Core\Window.h" />
     <ClInclude Include="src\Engine.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
